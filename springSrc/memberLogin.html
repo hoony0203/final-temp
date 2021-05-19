@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지금, 보고 싶다 == 회원가입</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="memberLogin.css">    
+
+</head>
+
+<body>
+  
+    <header>
+
+    </header>
+   
+    <section>
+
+        <div>
+
+            <article>
+
+
+
+            </article>
+
+            <article>
+
+                <div id="titleWrap">
+                <div id="registFormTitle">
+                    회원가입
+                </div>
+                </div>
+            </article>
+
+            <article>
+                <form>
+                    <div id="registForm">
+
+                        <table border="1" id="registTable">
+
+                            
+                                <th><br><br></th>                                
+                                <tr>
+                                    <td>
+                                        <label id="idLabel">ID</label> 
+                                    </td>
+                                </tr>
+                                <tr> 
+                                    <td>
+                                    <input type="text" id="idInput" name="idInput"> 
+                                    </td>
+                                    <tr><td><br></td></tr>                                
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label id="passwordLabel">비밀번호</label> 
+                                    </td>
+                                </tr>
+                                <tr> 
+                                    <td>
+                                        <input type="password" id="pwInput" name="pwInput">
+                                    </td>                                
+                                </tr>
+                                <tr> 
+                                    <td>
+                                        <input type="password" id="pwConfirm" name="pwConfirm">
+                                    </td>                                
+                                </tr>
+                                <tr><td><br></td></tr>
+                                <tr>
+                                    <td>
+                                        <label>이름</label>
+                                    </td>
+                                </tr>    
+                                <tr> 
+                                    <td>
+                                        <input type="text" id="nameInput" name="nameInput">
+                                    </td>                                
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>생년월일</label>
+                                    </td>
+                                </tr>    
+                                <tr> 
+                                    <td>
+                                        <input type="number" min="1910" max="2021" id="yearInput" name="yearInput" placeholder="선택">년
+                                        <select id="month">
+                                           <option id="monthSelect" value="">선택</option>
+                                        </select>
+                                        월
+                                        <select id="day">
+                                            <option id="daySelect" value="">선택</option>
+                                        </select>   
+                                        일 
+                                    </td>                                                         
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <button type="button" id="searchZipCode" class="chkButton">
+                                            주소 검색
+                                        </button>
+                                        <div class="login_input_box">
+                                            우편번호 <input type="text" name="memZipCode" id="memZipCode" >
+                                        </div>
+                                        <div class="login_input_box">
+                                            주소 <input type="text" name="memAddress" id="memAddress" >
+                                        </div>
+                                        <div class="login_input_box">
+                                            상세주소 <input type="text" name="memDetailAddress" id="memDetailAddress" >
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                            <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                            <script>
+                            const $searchZipCode = document.getElementById("searchZipCode");
+                            $searchZipCode.onclick = function(){
+			
+                                new daum.Postcode({
+                                    oncomplete : function(data){
+                                        document.getElementById("memZipCode").value = data.zonecode;
+                                        document.getElementById("memAddress").value = data.address;
+                                        document.getElementById("memDetailAddress").focus();
+                                    }
+                                }).open();
+                            }
+                            
+                            </script>
+                            <script>
+                                var month="";
+                                for(var i=1; i<=12; i++){
+
+                                    month += "<option value="+i+">" + i+"</option>"
+                                    
+                                    //console.log(month);
+                                }
+                                $('#month').append(month)    
+                                
+                                var day="";
+                                for(var i=1; i<=31; i++){
+
+                                    day += "<option value="+i+">" + i+"</option>"
+                                    
+                                    //console.log(day);
+                                }
+                                $('#day').append(day)    
+
+                            </script>
+                            
+        
+                        </table>
+                        
+                        
+                    </div>
+            
+                
+                </form>
+
+            </article>
+
+        </div>
+
+
+    </section>
+
+
+    
+
+    
+
+
+
+
+</body>
+</html>

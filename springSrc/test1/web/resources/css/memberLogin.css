@@ -1,0 +1,99 @@
+body{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: auto;	
+}
+
+.btn{	
+	background-color: #775EEE;
+	color:#fff;
+	height:35px;
+	border-radius: 10px;
+	border: none;
+	transition: background 0.5s ease-in-out;
+}
+
+.btn:hover{
+	background-color: rgba(175, 170, 201, 1);
+	}
+
+.pointColorFont{	
+	color:#775EEE;
+}
+.grayColorFont{	
+	color:#9A9A9A;
+}
+.whiteColorFont{	
+	color:#fff;
+}
+
+.agree{
+	font-size:15px;	
+}
+.radioBtn{
+	margin-left:85px;	
+}
+.radioLabel{
+	margin-left:5px; color:white;	
+}
+
+#registTable label:not(.agree,.radioLabel){
+    margin-left:20px;
+    font-family: Roboto; font-style: normal; font-weight: normal; 
+    font-size: 20px; line-height: 29px; color:white;
+}
+#registTable input:not(#yearInput,#zipCode,#address,#detailAddress,.chkbox,.radioBtn){
+    margin-left:80px; 
+    width:224px; height:30px;
+    border-radius: 10px;
+    border: 1px solid;
+    transition: background 0.1s ease-in-out;     
+}
+#registTable input:hover{
+ 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+}
+#registFormTitle{        
+    display: flex; flex-direction: column; margin-left: auto; margin-right:580px;
+    margin-top:100px;
+    width: 140px; height: 25px; left: 960px; top: 73px; 
+    
+    font-family: Roboto; font-style: normal; font-weight: normal;
+    font-size: 30px; line-height: 23px; 
+    }
+#registForm{ 
+    display: flex; flex-direction: column; margin-left: auto; margin-right:300px;
+    margin-top:30px;
+    width: 390.44px; height: 1300px; left: 984px; top: 115px;
+
+    background: rgba(119, 94, 238, 0.7);
+    }
+
+#registBtn{
+	margin-left:60px; height:55px; width:260px; font-size:25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+#yearInput{
+    margin-left:40px; 
+    width:100px; height:30px;   
+}
+
+#zipCode{
+	margin-left:10px;
+	width:60px; height:30px;
+	border-radius: 10px;
+    border: 1px solid; 
+}
+#address,#detailAddress{
+	margin-left:70px;
+	width:230px; height:30px;
+	border-radius: 10px;
+    border: 1px solid; 
+}
+    
+#loginTextArea{
+	margin-left:85px;
+}    
